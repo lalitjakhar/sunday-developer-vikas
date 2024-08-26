@@ -83,7 +83,7 @@ const LoremSection = () => {
               </Box>
             </Box>
             <Box sx={{ textAlign: "center" }}>
-              <Button sx={{width:"170px", height:"48px", bgcolor:"rgba(33, 37, 41, 1)", fontSize:"20px", lineHeight:"25px", color:"rgba(255, 255, 255, 1)"}}> Lern more</Button>
+              <Button sx={{width:"170px", height:"48px", bgcolor:"rgba(33, 37, 41, 1)", fontSize:"20px", lineHeight:"25px", color:"rgba(255, 255, 255, 1)"  ,textTransform:"none"}}> Lern more</Button>
             </Box>
           </Container>
         </Box>

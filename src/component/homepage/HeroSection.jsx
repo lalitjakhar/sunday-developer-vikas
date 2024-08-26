@@ -69,6 +69,7 @@ const HeroSection = () => {
                         fontWeight: "400px",
                         lineHeight: "25px",
                         color: "rgba(0, 0, 0, 1)",
+                         textTransform:"none"
                       }}
                     >
                       Expore

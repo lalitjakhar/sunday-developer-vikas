@@ -3,7 +3,7 @@ import { Container, AppBar, Toolbar, Box, Button } from "@mui/material";
 const Navbar = () => {
   return (
     <>
-      <AppBar sx={{ bgcolor: "rgba(116, 198, 157, 1)", boxShadow: "none", height:"80px", display:"flex",justifyContent:"center" }}>
+      <AppBar sx={{ bgcolor: "rgba(116, 198, 157, 1)", boxShadow: "none", height:"80px", display:"flex",justifyContent:"center",position:"fixed" }}>
         <Toolbar>
           
           <Container
@@ -11,7 +11,7 @@ const Navbar = () => {
             sx={{ display: "flex", justifyContent: "space-between" }}
           > 
             <Box>
-              <img src="src/assets/nabbar/nabarlogo.svg" alt="" width={"100%"} />
+              <img src="src/assets/nabbar/nabarlogo.svg" alt="" width={"187px"} height={"48px"} />
             </Box>
             <Box sx={{ display: "flex", gap: "10px" }}>
               <Button
@@ -21,6 +21,7 @@ const Navbar = () => {
                   lineHeight: "25px",
                   fontWeight: "400",
                   fontFamily: "sans-serif",
+                  textTransform:"none"
                 }}
               >
                 Home
@@ -32,6 +33,7 @@ const Navbar = () => {
                   lineHeight: "25px",
                   fontWeight: "400",
                   fontFamily: "sans-serif",
+                  textTransform:"none"
                 }}
               >
                 Portfolio
@@ -43,6 +45,7 @@ const Navbar = () => {
                   lineHeight: "25px",
                   fontWeight: "400",
                   fontFamily: "sans-serif",
+                  textTransform:"none"
                 }}
               >
                 Services
@@ -54,6 +57,7 @@ const Navbar = () => {
                   lineHeight: "25px",
                   fontWeight: "400",
                   fontFamily: "sans-serif",
+                  textTransform:"none"
                 }}
               >
                 Contact

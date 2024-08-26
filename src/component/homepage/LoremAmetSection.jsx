@@ -55,6 +55,7 @@ const LorenAmetSection = () => {
                         lineHeight: "25px",
                         textAlign: "center",
                         color: "rgba(255, 255, 255, 1)",
+                         textTransform:"none"
                       }}
                     >
                       Learn More
