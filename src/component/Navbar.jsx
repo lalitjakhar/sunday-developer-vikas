@@ -1,10 +1,10 @@
-import { AppBar, Toolbar, Box, Button } from "@mui/material";
+import {Container, AppBar, Toolbar, Box, Button } from "@mui/material";
 
 const Navbar = () => {
   return (
     <>
-      <AppBar >
-       
+     <Container maxWidth="lg">
+     <AppBar>
           <Toolbar>
               <Box sx={{flexGrow:"1"}}>
                 <img src="src/assets/nabbar/nabarlogo.svg" alt="" />
@@ -19,6 +19,7 @@ const Navbar = () => {
           </Toolbar>
     
       </AppBar>
+     </Container>
     </>
   );
 };

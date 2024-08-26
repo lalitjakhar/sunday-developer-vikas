@@ -32,4 +32,8 @@
     .TeamSectionImg{
         flex-direction: column !important;
     }
+    .FooterSection{
+        flex-direction: column !important;
+        gap:10px;
+    }
 } 
