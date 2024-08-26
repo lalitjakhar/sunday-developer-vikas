@@ -29,4 +29,7 @@
         flex-direction: column !important;
         gap: 30px;
     }
+    .TeamSectionImg{
+        flex-direction: column !important;
+    }
 } 
