@@ -1,25 +1,66 @@
-import {Container, AppBar, Toolbar, Box, Button } from "@mui/material";
+import { Container, AppBar, Toolbar, Box, Button } from "@mui/material";
 
 const Navbar = () => {
   return (
     <>
-     <Container maxWidth="lg">
-     <AppBar>
-          <Toolbar>
-              <Box sx={{flexGrow:"1"}}>
-                <img src="src/assets/nabbar/nabarlogo.svg" alt="" />
-              </Box>
-              <Box sx={{ display: "flex", gap: "10px" }}>
-                <Button color="inherit">Home</Button>
-                <Button color="inherit">Portfolio</Button>
-                <Button color="inherit">Services</Button>
-                <Button color="inherit">Contact</Button>
-              </Box>
-     
-          </Toolbar>
-    
+      <AppBar sx={{ bgcolor: "transparent", boxShadow: "none",  height:"120px", display:"flex",justifyContent:"center" }}>
+        <Toolbar>
+          <Container
+            maxWidth="lg"
+            sx={{ display: "flex", justifyContent: "space-between" }}
+          > 
+            <Box>
+              <img src="src/assets/nabbar/nabarlogo.svg" alt="" width={"100%"} />
+            </Box>
+            <Box sx={{ display: "flex", gap: "10px" }}>
+              <Button
+                color="inherit"
+                sx={{
+                  fontSize: "20px",
+                  lineHeight: "25px",
+                  fontWeight: "400",
+                  fontFamily: "sans-serif",
+                }}
+              >
+                Home
+              </Button>
+              <Button
+                color="inherit"
+                sx={{
+                  fontSize: "20px",
+                  lineHeight: "25px",
+                  fontWeight: "400",
+                  fontFamily: "sans-serif",
+                }}
+              >
+                Portfolio
+              </Button>
+              <Button
+                color="inherit"
+                sx={{
+                  fontSize: "20px",
+                  lineHeight: "25px",
+                  fontWeight: "400",
+                  fontFamily: "sans-serif",
+                }}
+              >
+                Services
+              </Button>
+              <Button
+                color="inherit"
+                sx={{
+                  fontSize: "20px",
+                  lineHeight: "25px",
+                  fontWeight: "400",
+                  fontFamily: "sans-serif",
+                }}
+              >
+                Contact
+              </Button>
+            </Box>
+          </Container>
+        </Toolbar>
       </AppBar>
-     </Container>
     </>
   );
 };

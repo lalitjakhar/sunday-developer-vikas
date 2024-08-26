@@ -10,7 +10,7 @@ const HeroSection = () => {
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
-            height: "586px",
+            height: "686px",
           }}
         >
           <Container maxWidth="lg">
