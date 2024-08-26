@@ -3,8 +3,9 @@ import { Container, AppBar, Toolbar, Box, Button } from "@mui/material";
 const Navbar = () => {
   return (
     <>
-      <AppBar sx={{ bgcolor: "transparent", boxShadow: "none",  height:"120px", display:"flex",justifyContent:"center" }}>
+      <AppBar sx={{ bgcolor: "rgba(116, 198, 157, 1)", boxShadow: "none", height:"80px", display:"flex",justifyContent:"center" }}>
         <Toolbar>
+          
           <Container
             maxWidth="lg"
             sx={{ display: "flex", justifyContent: "space-between" }}
