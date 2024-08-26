@@ -25,4 +25,8 @@
         gap: 10px !important;
         align-items: center !important;
     }
+    .LoremAmetSection{
+        flex-direction: column !important;
+        gap: 30px;
+    }
 } 
