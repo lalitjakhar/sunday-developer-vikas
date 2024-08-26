@@ -1,5 +1,6 @@
 import HeroSection from "./HeroSection";
 import LorenAmetSection from "./LoremAmetSection";
+import LoremIpsumSection from "./LoremIpsumSection";
 import LoremSection from "./LoremSection";
 
 const Homepage = () => {
@@ -8,6 +9,7 @@ const Homepage = () => {
       <HeroSection />
       <LoremSection />
       <LorenAmetSection />
+      <LoremIpsumSection />
     </>
   );
 };
