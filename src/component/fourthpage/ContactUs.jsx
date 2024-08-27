@@ -5,7 +5,7 @@ const ContactUs = () => {
     <>
       <div>
         <Box>
-          <Container maxWidth="lg">
+          <Container maxWidth="lg" sx={{paddingBlock:"30px"}}>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box
                 maxWidth={"411px"}
@@ -43,26 +43,26 @@ const ContactUs = () => {
                marginBlock:'80px'
               }}
             >
-              <Box width={"100% "} >
-                <Box height={"384px"} sx={{ display: "grid", gap: "21px" }}>
+              <Box width={"100% "} sx={{order:{sm:"2",xs:"2",md:"1",lg:"1"}}} >
+                <Box height={"384px"} sx={{ display: "grid", }}>
                   <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" id="name" />
+                    <label htmlFor="name" style={{fontSize:"20px"}}>Name</label>
+                    <input type="text" id="name" style={{minHeight:"40px",backgroundColor:"rgba(238, 238, 238, 1)", border:'1px solid black', borderRadius:'5px'}} />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="name">Email</label>
-                    <input type="email" id="name" />
+                    <label htmlFor="name" style={{fontSize:"20px"}}>Email</label>
+                    <input type="email" id="name" style={{minHeight:"40px" ,backgroundColor:"rgba(238, 238, 238, 1)", border:'1px solid black', borderRadius:'5px'}}  />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="massage">Massage</label>
-                    <input type="text" id="name" />
+                    <label htmlFor="massage" style={{fontSize:"20px"}}>Massage</label>
+                    <input  type="text" id="name" style={{minHeight:"60px" ,backgroundColor:"rgba(238, 238, 238, 1)", border:'1px solid black', borderRadius:'5px'}}  />
                   </div>
-                  <Button sx={{ width: "100%", bgcolor: "black" }}>
+                  <Button sx={{ width: "100%", bgcolor: "black", fontSize:"20px",fontWeight:"400",lineHeight:"25px", color:"rgba(255, 255, 255, 1) " , textTransform:"none" }}>
                     Submit
                   </Button>
                 </Box>
               </Box>
-              <Box width={"100%"}>
+              <Box width={"100%"} sx={{order:{sm:"1",xs:"1",md:"2",lg:"2"}}}>
                 <img
                   src="src/assets/contactus/contactus (1).png"
                   alt=""

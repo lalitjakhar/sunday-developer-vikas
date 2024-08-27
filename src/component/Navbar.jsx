@@ -6,18 +6,18 @@ const Navbar = () => {
       <AppBar sx={{ bgcolor: "rgba(116, 198, 157, 1)", boxShadow: "none", height:"80px", display:"flex",justifyContent:"center",position:"relative" ,top:"0" }}>
         <Toolbar>
           
-          <Container
+          <Container className="navbar"
             maxWidth="lg"
             sx={{ display: "flex", justifyContent: "space-between" }}
           > 
             <Box>
               <img src="src/assets/nabbar/nabarlogo.svg" alt="" width={"187px"} height={"48px"} />
             </Box>
-            <Box sx={{ display: "flex", gap: "10px" }}>
+            <Box className="navbae1" sx={{ display: "flex", gap: "10px"  }}>
               <Button
                 color="inherit"
                 sx={{
-                  fontSize: "20px",
+                  fontSize: {sm:"15px",md:"20px",lg:"20px"},
                   lineHeight: "25px",
                   fontWeight: "400",
                   fontFamily: "sans-serif",
@@ -30,7 +30,7 @@ const Navbar = () => {
               <Button
                 color="inherit"
                 sx={{
-                  fontSize: "20px",
+                  fontSize: {sm:"15px",md:"20px",lg:"20px"},
                   lineHeight: "25px",
                   fontWeight: "400",
                   fontFamily: "sans-serif",
@@ -43,7 +43,7 @@ const Navbar = () => {
               <Button
                 color="inherit"
                 sx={{
-                  fontSize: "20px",
+                  fontSize: {sm:"15px",md:"20px",lg:"20px"},
                   lineHeight: "25px",
                   fontWeight: "400",
                   fontFamily: "sans-serif",
@@ -56,12 +56,13 @@ const Navbar = () => {
               <Button
                 color="inherit"
                 sx={{
-                  fontSize: "20px",
+                  fontSize: {sm:"15px",md:"20px",lg:"20px"},
                   lineHeight: "25px",
                   fontWeight: "400",
                   fontFamily: "sans-serif",
                   textTransform:"none"
                 }}
+                href="http://localhost:5173/fourthpage"
               >
                 Contact
               </Button>

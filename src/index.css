@@ -49,6 +49,10 @@
     .Contactuspagecontent{
         flex-direction: column !important;
     }
+    .navbar{
+        flex-direction: column !important;
+    }
+    
 } 
 
 .form-group {
