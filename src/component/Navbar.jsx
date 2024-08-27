@@ -3,7 +3,7 @@ import { Container, AppBar, Toolbar, Box, Button } from "@mui/material";
 const Navbar = () => {
   return (
     <>
-      <AppBar sx={{ bgcolor: "rgba(116, 198, 157, 1)", boxShadow: "none", height:"80px", display:"flex",justifyContent:"center",position:"fixed" }}>
+      <AppBar sx={{ bgcolor: "rgba(116, 198, 157, 1)", boxShadow: "none", height:"80px", display:"flex",justifyContent:"center",position:"relative" ,top:"0" }}>
         <Toolbar>
           
           <Container
@@ -23,6 +23,7 @@ const Navbar = () => {
                   fontFamily: "sans-serif",
                   textTransform:"none"
                 }}
+                href="http://localhost:5173/"
               >
                 Home
               </Button>
@@ -35,6 +36,7 @@ const Navbar = () => {
                   fontFamily: "sans-serif",
                   textTransform:"none"
                 }}
+                href="http://localhost:5173/secondpage"
               >
                 Portfolio
               </Button>
@@ -47,6 +49,7 @@ const Navbar = () => {
                   fontFamily: "sans-serif",
                   textTransform:"none"
                 }}
+                href="http://localhost:5173/thirdpage"
               >
                 Services
               </Button>

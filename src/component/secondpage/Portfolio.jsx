@@ -4,7 +4,7 @@ const Portfolio = () => {
   return (
     <>
       <div>
-        <Box sx={{ paddingTop: "100px" }}>
+        <Box sx={{ paddingBlock: "100px" }}>
           <Container maxWidth="lg">
             <Box sx={{ display: "grid", gap: "30px" }}>
               <Box sx={{ display: "flex", justifyContent: "center" }}>

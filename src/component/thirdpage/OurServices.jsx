@@ -5,7 +5,7 @@ const OurServices = () => {
     <>
       <div>
         <Box>
-          <Container maxWidth="lg" sx={{ paddingTop: "100px", display:"grid" ,gap:"40px" }}>
+          <Container maxWidth="lg" sx={{ paddingBlock: "120px", display:"grid" ,gap:"40px" }}>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box
                 maxWidth={"411px"}
@@ -45,9 +45,9 @@ const OurServices = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box className="ourservicescontent" sx={{ display: "flex", gap: "105px" }}>
+            <Box className="OurServicesPage" sx={{ display: "flex",gap:"100px" }}>
               <Box
-                width={"33%"}
+                width={"100%"}
                 sx={{
                
                   display: "flex",
@@ -166,7 +166,7 @@ const OurServices = () => {
                 </Box>
               </Box>
               <Box
-                width={"33%"}
+                width={"100%"}
                 sx={{
                   
                   display: "flex",
@@ -285,7 +285,7 @@ const OurServices = () => {
                 </Box>
               </Box>
               <Box
-                width={"33%"}
+                width={"100%"}
                 sx={{
                 
                   display: "flex",

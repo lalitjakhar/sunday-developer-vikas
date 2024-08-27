@@ -3,9 +3,9 @@ const Footer = () => {
   return (
     <>
       <div>
-        <Box sx={{ bgcolor: "rgba(116, 198, 157, 1)", height: "80px", display:"flex",alignItems:"center", marginTop:"30px" }}>
+        <Box sx={{ bgcolor: "rgba(116, 198, 157, 1)",  position:"sticky", bottom:"0px" }}>
           <Container maxWidth="lg" >
-            <Box className="FooterSection" sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box className="FooterSection" sx={{ width:"100%", display: "flex", justifyContent: "space-between", paddingBlock:"40px" }}>
               <Box sx={{ display: "flex", gap: "10px" }}>
                 <Box>
                   {" "}
