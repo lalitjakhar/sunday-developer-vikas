@@ -56,7 +56,10 @@
 } 
 
 .form-group {
-    margin-bottom: 10px; /* Adjust this value as needed */
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .form-group label {
     display: block;
