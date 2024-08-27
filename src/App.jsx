@@ -6,7 +6,7 @@ import Portfolio from "./component/secondpage/Portfolio";
 import Footer from "./component/homepage/Footer";
 import OurServices from "./component/thirdpage/OurServices";
 import ContactUs from "./component/fourthpage/ContactUs";
-
+import PricingCard from "./component/fivepage/PricingCard";
 
 
 function App() {
@@ -20,10 +20,13 @@ function App() {
             <Route path="/secondpage" element={<Portfolio />} />
             <Route path="/thirdpage" element={<OurServices />} />
             <Route path="/fourthpage" element={<ContactUs />} />
+            <Route path="/fivepage" element={<PricingCard />} />
+
           </Routes>
         </main>
         <Footer />
       </Router>
+      
     </>
   );
 }

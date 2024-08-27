@@ -52,6 +52,14 @@
     .navbar{
         flex-direction: column !important;
     }
+    .pricingcard{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .pricingcard1{
+        width: 100% !important;
+    }
     
 } 
 
