@@ -12,17 +12,6 @@ const CustomDeleteIcon = styled(DeleteIcon)({
   
 });
 
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(7),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(4),
-  },
- 
-  
-}));
-
 export default function CustomizedDialogs() {
   const [open, setOpen] = React.useState(false);
 
@@ -40,14 +29,16 @@ export default function CustomizedDialogs() {
         Open dialog
       </Button>
      </Box>
-      <BootstrapDialog
+      <Dialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
+        maxWidth="lg"
+        fullWidth
       >
         <DialogContent dividers>
           <Typography sx={{textAlign:"center"}} gutterBottom>
-           <CustomDeleteIcon /><br></br>
+           <CustomDeleteIcon sx={{color:'rgb(0 159 127)'}} /><br></br>
            <span style={{color:"black", fontWeight:"800"}}>Delete</span>
           </Typography>
           <Typography  sx={{textAlign:"center"}}  gutterBottom>
@@ -63,7 +54,7 @@ export default function CustomizedDialogs() {
             Delete
           </Button>
         </DialogActions>
-      </BootstrapDialog>
+      </Dialog>
     </React.Fragment>
   );
 }

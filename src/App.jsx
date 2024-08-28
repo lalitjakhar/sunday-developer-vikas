@@ -9,6 +9,7 @@ import ContactUs from "./component/fourthpage/ContactUs";
 import PricingCard from "./component/fivepage/PricingCard";
 
 import Diolog from "./component/sixpage/Dialog";
+import FruitDialog from "./component/sevenpage/FruitsDialog";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/fourthpage" element={<ContactUs />} />
             <Route path="/fivepage" element={<PricingCard />} />
             <Route path="/sixpage" element={<Diolog />} />
+            <Route path="/sevenpage" element={<FruitDialog />} />
 
           </Routes>
         </main>
