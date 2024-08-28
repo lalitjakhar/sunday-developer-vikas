@@ -8,6 +8,8 @@ import OurServices from "./component/thirdpage/OurServices";
 import ContactUs from "./component/fourthpage/ContactUs";
 import PricingCard from "./component/fivepage/PricingCard";
 
+import Diolog from "./component/sixpage/Dialog";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
             <Route path="/thirdpage" element={<OurServices />} />
             <Route path="/fourthpage" element={<ContactUs />} />
             <Route path="/fivepage" element={<PricingCard />} />
+            <Route path="/sixpage" element={<Diolog />} />
 
           </Routes>
         </main>

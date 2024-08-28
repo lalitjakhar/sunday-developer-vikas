@@ -1,9 +1,79 @@
-import { Box, Typography, Container, Button } from "@mui/material";
-import { Tabs } from "@mui/base/Tabs";
-import { TabsList } from "@mui/base/TabsList";
+import { Box, Typography, Container } from "@mui/material";
 
-import { Tab } from "@mui/base/Tab";
-import CheckIcon from "@mui/icons-material/Check";
+import { styled } from "@mui/system";
+import { Tabs } from "@mui/base/Tabs";
+import { TabsList as BaseTabsList } from "@mui/base/TabsList";
+import { buttonClasses } from "@mui/base/Button";
+import { Tab as BaseTab, tabClasses } from "@mui/base/Tab";
+import { grey } from "@mui/material/colors";
+import { TabPanel } from "@mui/base";
+import MonthlyPricing from "./MonthlyPricing";
+import QuaterlyPricing from "./QuaterlyPricing";
+
+const blue = {
+  50: "#F0F7FF",
+  100: "#C2E0FF",
+  200: "#80BFFF",
+  300: "#66B2FF",
+  400: "#3399FF",
+  500: "#8A2BE2",
+  600: "#0072E5",
+  700: "#0059B2",
+  800: "#004C99",
+  900: "#003A75",
+};
+
+const Tab = styled(BaseTab)`
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #00000;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: bold;
+  background-color: transparent;
+  width: 100%;
+  line-height: 1.5;
+  padding: 8px 12px;
+  margin: 6px;
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    background-color: ${blue[500]};
+  }
+
+  &:focus {
+    color: #fff;
+    outline: 3px solid ${blue[400]};
+  }
+
+  &.${tabClasses.selected} {
+    color: #fff;
+    background-color: ${blue[500]};
+  }
+
+  &.${buttonClasses.disabled} {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`;
+
+const TabsList = styled(BaseTabsList)(
+  ({ theme }) => `
+    min-width: 600px;
+    background-color: ${grey[200]};
+    border-radius: 22px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    box-shadow: 0px 4px 6px ${
+      theme.palette.mode === "dark" ? "rgba(0,0,0, 0.4)" : "rgba(0,0,0, 0.2)"
+    };
+    `
+);
 
 const PricingCard = () => {
   return (
@@ -20,317 +90,25 @@ const PricingCard = () => {
           </Typography>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Tabs defaultValue={1}>
+          <Tabs
+            defaultValue={1}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
             <TabsList>
-              <Tab value={1}>One</Tab>
-              <Tab value={2}>Two</Tab>
-              <Tab value={3}>Three</Tab>
+              <Tab value={1}>Monthly Pricing</Tab>
+              <Tab value={2}>Quaterly Pricing</Tab>
             </TabsList>
+            <TabPanel value={1}>
+              <MonthlyPricing />
+            </TabPanel>
+            <TabPanel value={2}>
+              <QuaterlyPricing />
+            </TabPanel>
           </Tabs>
-        </Box>
-        <Box className="pricingcard" sx={{ width:"100%", display: "flex", gap: "25px", paddingBlock:"50px" }}>
-            
-
-
-          <Box className="pricingcard1"
-            sx={{
-                width:"33%",
-              padding: "30px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "30px",
-              borderRadius:"20px",
-              boxShadow:"3"
-            }}
-          >
-            <Box>
-              <Button
-                sx={{
-                  bgcolor: "#4287f5",
-                  color: "white",
-                  borderRadius: "10px",
-                  marginBottom: "14px",
-                }}
-              >
-                {" "}
-                Pro
-              </Button>
-              <Typography sx={{ color: "rgba(33, 37, 41, 0.5)" }}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aliquam quasi voluptatibus atque deleniti ipsum enim quos .
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                borderBottom: "1px solid rgba(33, 37, 41, 0.5)",
-                paddingBottom: "40px",
-              }}
-            >
-              <Typography>
-                <span
-                  style={{
-                    fontSize: "30px",
-                    color: "black",
-                    fontWeight: "800",
-                  }}
-                >
-                  $2500{" "}
-                </span>
-                <span style={{ color: "rgba(33, 37, 41, 0.5)" }}>/month</span>
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                borderBottom: "1px solid rgba(33, 37, 41, 0.5)",
-                paddingBottom: "120px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-              }}
-            >
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround Lorem.py
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround Lorem, ipsum
-              </Typography>
-            </Box>
-
-            <Box>
-              <Button
-                sx={{
-                  bgcolor: "white",
-                  width: "100%",
-                  border: "1px solid rgba(33, 37, 41, 0.5)",
-                  color: "black",
-                  textTransform: "none",
-                }}
-              >
-                get started
-              </Button>
-            </Box>
-          </Box>
-
-
-
-
-
-          <Box className="pricingcard1"
-            sx={{
-                width:"33%",
-              padding: "30px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "30px",
-              borderRadius:"30px",
-              boxShadow:"3"
-            }}
-          >
-            <Box>
-              <Button
-                sx={{
-                  bgcolor: "#4287f5",
-                  color: "white",
-                  borderRadius: "10px",
-                  marginBottom: "14px",
-                }}
-              >
-                {" "}
-                Pro Plus
-              </Button>
-              <Typography sx={{ color: "rgba(33, 37, 41, 0.5)" }}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aliquam quasi 
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                borderBottom: "1px solid rgba(33, 37, 41, 0.5)",
-                paddingBottom: "15px",
-              }}
-            >
-              <Typography>
-                <span
-                  style={{
-                    fontSize: "30px",
-                    color: "black",
-                    fontWeight: "800",
-                  }}
-                >
-                  $3800{" "}
-                </span>
-                <span style={{ color: "rgba(33, 37, 41, 0.5)" }}>/month</span>
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                borderBottom: "1px solid rgba(33, 37, 41, 0.5)",
-                paddingBottom: "98px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-              }}
-            >
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround Lorem.py
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround Lorem, ipsum
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround Lorem, ipsum
-              </Typography>
-            </Box>
-
-            <Box>
-              <Button
-                sx={{
-                  bgcolor: "white",
-                  width: "100%",
-                  border: "1px solid rgba(33, 37, 41, 0.5)",
-                  color: "black",
-                  textTransform: "none",
-                }}
-              >
-                get started
-              </Button>
-            </Box>
-          </Box>
-
-
-
-
-
-          <Box className="pricingcard1"
-            sx={{
-                width:"33%",
-              padding: "30px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "30px",
-              borderRadius:"30px",
-              boxShadow:"3"
-            }}
-          >
-            <Box>
-              <Button
-                sx={{
-                  bgcolor: "#4287f5",
-                  color: "white",
-                  borderRadius: "10px",
-                  marginBottom: "14px",
-                }}
-              >
-                {" "}
-               Custom
-              </Button>
-              <Typography sx={{ color: "rgba(33, 37, 41, 0.5)" }}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aliquam quasi voluptatibus atque deleniti ipsum enim quos .
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                borderBottom: "1px solid rgba(33, 37, 41, 0.5)",
-                paddingBottom: "40px",
-              }}
-            >
-              <Typography>
-                <span
-                  style={{
-                    fontSize: "30px",
-                    color: "black",
-                    fontWeight: "800",
-                  }}
-                >
-                 Lets Talks!{" "}
-                </span>
-               
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                borderBottom: "1px solid rgba(33, 37, 41, 0.5)",
-                paddingBottom: "84px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-              }}
-            >
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround Lorem, ipsum
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround Lorem.py
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround
-              </Typography>
-              <Typography>
-                {" "}
-                <CheckIcon /> 3-5 days turnaround Lorem, ipsum
-              </Typography>
-            </Box>
-
-            <Box>
-              <Button
-                sx={{
-                  width: "100%",
-                  border: "1px solid rgba(33, 37, 41, 0.5)",
-                  color: "white",
-                  textTransform: "none",
-                  bgcolor:"black"
-                }}
-              >
-                Book a call
-              </Button>
-            </Box>
-          </Box>
-
         </Box>
       </Container>
     </div>
