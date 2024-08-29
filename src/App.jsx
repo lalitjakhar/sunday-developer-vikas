@@ -10,6 +10,8 @@ import PricingCard from "./component/fivepage/PricingCard";
 
 import Diolog from "./component/sixpage/Dialog";
 import FruitDialog from "./component/sevenpage/FruitsDialog";
+import TemporaryDrawer from "./component/eightpage/Drawer";
+import BeckySilkBlazer from "./component/ninepage/BeckySilkBlazer";
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
             <Route path="/fivepage" element={<PricingCard />} />
             <Route path="/sixpage" element={<Diolog />} />
             <Route path="/sevenpage" element={<FruitDialog />} />
+            <Route path="/eightpage" element={<TemporaryDrawer />} />
+            <Route path="/ninepage" element={<BeckySilkBlazer />} />
 
           </Routes>
         </main>

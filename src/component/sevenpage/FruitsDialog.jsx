@@ -2,7 +2,6 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
-
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import Checkbox from "@mui/material/Checkbox";
@@ -88,7 +87,7 @@ export default function FruitDialog() {
               </DialogContentText>
               <Box sx={{ width: 500, maxWidth: "100%" }}>
                 <TextField
-                  sx={{ bgcolor: "background.paper" }} // Set background color or any other styles
+                  sx={{ bgcolor: "background.paper" }} 
                   fullWidth
                   label="Email"
                   id="fullWidth"
