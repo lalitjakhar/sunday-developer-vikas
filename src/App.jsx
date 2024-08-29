@@ -7,11 +7,11 @@ import Footer from "./component/homepage/Footer";
 import OurServices from "./component/thirdpage/OurServices";
 import ContactUs from "./component/fourthpage/ContactUs";
 import PricingCard from "./component/fivepage/PricingCard";
-
 import Diolog from "./component/sixpage/Dialog";
 import FruitDialog from "./component/sevenpage/FruitsDialog";
 import TemporaryDrawer from "./component/eightpage/Drawer";
 import BeckySilkBlazer from "./component/ninepage/BeckySilkBlazer";
+import LoginPage from "./component/tenpage/LoginPage";
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
             <Route path="/sevenpage" element={<FruitDialog />} />
             <Route path="/eightpage" element={<TemporaryDrawer />} />
             <Route path="/ninepage" element={<BeckySilkBlazer />} />
+            <Route path="/tenpage" element={<LoginPage />} />
 
           </Routes>
         </main>

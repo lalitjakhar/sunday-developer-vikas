@@ -33,7 +33,7 @@ const BeckySilkBlazer = () => {
           borderRadius: "30px",
         }}
       >
-        <Box sx={{ display: "flex", width: "100%" }}>
+        <Box sx={{ display: "flex", width: "100%", gap:"20px" }}>
           <Box
             width={"50%"}
             sx={{ display: "flex", flexDirection: "column", gap: "40px" }}

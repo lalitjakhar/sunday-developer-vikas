@@ -75,3 +75,8 @@
   .form-group input{
     width: 100%;
   }
+.loginpage{
+    background-image: url(assets/loginpage/loginbgimg.jpg);
+    background-size: cover;
+    /* background-position: center; */
+}
