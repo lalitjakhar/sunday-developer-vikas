@@ -23,7 +23,7 @@ const Navbar = () => {
                   fontFamily: "sans-serif",
                   textTransform:"none"
                 }}
-                href="http://localhost:5173/"
+                href="/"
               >
                 Home
               </Button>
@@ -36,7 +36,7 @@ const Navbar = () => {
                   fontFamily: "sans-serif",
                   textTransform:"none"
                 }}
-                href="http://localhost:5173/secondpage"
+                href="/secondpage"
               >
                 Portfolio
               </Button>
@@ -49,7 +49,7 @@ const Navbar = () => {
                   fontFamily: "sans-serif",
                   textTransform:"none"
                 }}
-                href="http://localhost:5173/thirdpage"
+                href="/thirdpage"
               >
                 Services
               </Button>
@@ -62,9 +62,22 @@ const Navbar = () => {
                   fontFamily: "sans-serif",
                   textTransform:"none"
                 }}
-                href="http://localhost:5173/fourthpage"
+                href="/fourthpage"
               >
                 Contact
+              </Button>
+              <Button
+                color="inherit"
+                sx={{
+                  fontSize: {sm:"15px",md:"20px",lg:"20px"},
+                  lineHeight: "25px",
+                  fontWeight: "400",
+                  fontFamily: "sans-serif",
+                  textTransform:"none"
+                }}
+                href="/fivepage"
+              >
+                Pricing
               </Button>
             </Box>
           </Container>
